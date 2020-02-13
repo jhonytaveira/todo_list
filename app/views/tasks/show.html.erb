@@ -1,0 +1,16 @@
+<% content_for(:title) do %>
+  <%= t('.title') %>
+<% end %>
+<p>
+  <strong><%= Task.human_attribute_name(:title) %>:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong><%= Task.human_attribute_name(:description) %>:</strong>
+  <%= @task.description %>
+</p>
+<br>
+<div class="modal-footer">
+  <%= button_tag t('buttons.close'), class: 'btn btn-secondary btn-sm', 'data-dismiss': 'modal' %>
+</div>

@@ -1,0 +1,27 @@
+<div id="list-example" class="list-group">
+  <% tasks.each do |task| %>
+    <div class="list-group-item list-group-item-action mb-1">
+      <div class="content-task">
+        <p><%= task.title %></p>
+
+        <div class="dropdown">
+          <%= link_to '#', class: 'text-decoration-none text-dark', type: 'button',
+                      id: 'dropdownMenuButton', 'data-toggle': 'dropdown', 'aria-haspopup': 'true',
+                      'aria-expanded': "false", 'data-hover': 'dropdown', title: t('.labels.actions') do %>
+            <b class="font-size-14 dot">...</b>
+          <% end %>
+
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <%= link_to t('actions.show'), task, class: 'dropdown-item', data: { modal: true } %>
+            <%= link_to t('actions.edit'), edit_task_path(task), class: 'dropdown-item', data: { modal: true } %>
+            <%= link_to t('actions.destroy'), task_path(task),
+                        class: 'dropdown-item',
+                        data: { confirm: 'Tem certeza que deseja apagar?' },
+                        method: :delete %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
