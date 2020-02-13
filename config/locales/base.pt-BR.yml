@@ -1,0 +1,52 @@
+pt-BR:
+  boards:
+    index:
+      warning: Selecione ou crie um board.
+      labels:
+        board: Selecione board
+    buttons:
+      create_board: Criar board
+      create_step: Criar etapa
+    new:
+      title: Criar board
+    create:
+      messages:
+        success: Board criado com sucesso.
+  steps:
+    new:
+      title: Criar etapa
+    edit:
+      title: Editar etapa
+    create:
+      messages:
+        success: Etapa criada com sucesso.
+    update:
+      messages:
+        success: Etapa atualizada com sucesso.
+  tasks:
+    index:
+      labels:
+        actions: Ações
+    new:
+      title: Criar Task
+      add_task: Adicionar task
+    edit:
+      title: Editar Task
+    show:
+      title: Task
+    create:
+      messages:
+        success: Task criada com sucesso.
+    update:
+      messages:
+        success: Task atualizada com sucesso.
+    destroy:
+      messages:
+        success: Task apagada com sucesso.
+  buttons:
+    save: Salvar
+    close: Fechar
+  actions:
+    show: Ver
+    edit: Editar
+    destroy: Apagar

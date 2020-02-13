@@ -1,0 +1,20 @@
+pt-BR:
+  activerecord:
+    models:
+      board:
+        one: Board
+        other: Boards
+    attributes:
+      board:
+        name: Nome
+      step:
+        name: Nome
+        messages:
+      task:
+        title: Título
+        description: Descrição
+    errors:
+      models:
+        step:
+          name:
+            unique_by_board: 'Já existe este step para o board.'
