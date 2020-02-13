@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TodoList</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'styles' %>
+    <%= yield :head %>
+  </head>
+
+  <body>
+    <div class="container-fluid" id="wrapper">
+      <div class="row">
+        <nav class="sidebar col-xs-12 col-sm-4 col-lg-3 col-xl-2 text-primary">
+          <h4 class="font-weight-bold text-white pl-2">Todo List</h4><br>
+
+          <ul class="nav nav-pills flex-column sidebar-nav">
+            <li class="nav-item">
+              <%= link_to boards_path, class: "font-weight-bold nav-link #{controller_name == 'boards' && 'active'}" do %>
+                <em class="fas fa-user-tie"></em> Boards
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+        <main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
+          <header class="page-header">
+            <% if flash.any? %>
+              <section class="content-header">
+                <%= render 'layouts/flash_messages' %>
+              </section>
+              <br>
+            <% end %>
+            <h4 class="pull-left text-black-50 pr-1">
+              <%= yield(:action_human_name) %></h4>
+            <div class="clear"></div>
+          </header>
+          <section class="row">
+            <div class="col-sm-12">
+              <section class="row">
+                <div class="col-md-12 col-lg-12">
+                  <div id="modal-holder"></div>
+                  <%= yield %>
+                </div>
+              </section>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

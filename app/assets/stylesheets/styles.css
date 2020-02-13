@@ -1,0 +1,79 @@
+body {
+  background-color: white;
+}
+
+footer {
+  height: 100px;
+}
+
+.container {
+  padding-left: 150px;
+  margin: 0 auto;
+}
+
+.navbar {
+  height: 60px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.error {
+  color: #dc3545 !important;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #007bff;
+}
+
+.page-header {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0rem;
+  margin-bottom: 2.4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #dfdfdf;
+  height: auto;
+}
+
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+  background-color: #1272da;
+}
+
+.dot {
+  font-size: 20px;
+  padding: 0 7px 7px 7px;
+}
+
+.dot:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.content-task{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown {
+  bottom: 10px;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+.card-body {
+  background-color: rgba(0, 0, 0, 0.06);
+}

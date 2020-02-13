@@ -1,0 +1,23 @@
+---
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - vendor/**/*
+    - log/**/*
+    - db/schema.rb
+    - bin/*
+    - node_modules/**/*
+    - config/*
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 70
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*
