@@ -1,0 +1,8 @@
+<% flash.each do |_, value| %>
+  <% if value.is_a?(String) %>
+    <div class="alert alert-success" role="alert">
+      <em class="fa fa-check-circle mr-2"></em>
+      <%= raw(value) %>
+    </div>
+  <% end %>
+<% end %>
