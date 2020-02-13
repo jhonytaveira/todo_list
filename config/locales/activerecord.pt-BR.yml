@@ -17,4 +17,4 @@ pt-BR:
       models:
         step:
           name:
-            unique_by_board: 'Já existe este step para o board.'
+            unique_by_board: 'Já existe esta etapa para o board.'

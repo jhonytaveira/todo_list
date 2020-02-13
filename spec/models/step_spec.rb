@@ -15,7 +15,7 @@ describe Step, type: :model do
 
     it do
       should validate_uniqueness_of(:name)
-        .scoped_to(:board_id).with_message('Já existe este step para o board.')
+        .scoped_to(:board_id).with_message('Já existe esta etapa para o board.')
     end
   end
 end
