@@ -1,0 +1,19 @@
+<div class="col-md-2 no-padding mr-5">
+  <%= link_to new_board_path, class: 'btn btn-primary btn-sm',
+              data: { modal: true },
+              title: t('.create_board') do %>
+    <span class="font-weight-bold"><%= t('.create_board') %></span>
+  <% end %>
+</div>
+
+<% if @board.present? %>
+  <div class="col-md-2 no-padding">
+    <%= link_to new_step_path(board_id: params[:id]), class: 'btn btn-primary btn-sm',
+                data: { modal: true }, title: t('.create_step') do %>
+          <span class="font-weight-bold">
+            <span class="font-size-14"></span>
+            <%= t('.create_step') %>
+          </span>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<% if @board.present? %>
+  <% content_for(:action_human_name) do %>
+    <% "#{t('activerecord.models.board.one')}(#{@board.name})" %>
+  <% end %>
+<% else %>
+  <div class="alert alert-warning" role="alert">
+    <%= t('.warning') %>
+  </div>
+<% end %>
+
+<div class="col">
+  <label for="board"><%= t('.labels.board') %></label>
+  <div class="row">
+    <div class="col-md-3 pr-1">
+      <div class="form-group">
+        <%= form_tag boards_path, id: 'form-board', method: :get do %>
+          <%= select_tag :id, options_from_collection_for_select(@boards, "id", "name", selected: params[:id]),
+                         class: 'form-control',
+                         id: 'board',
+                         include_blank: true %>
+        <% end %>
+      </div>
+    </div>
+    <%= render 'buttons' %>
+  </div>
+  <br>
+  <div class="row" id="steps">
+    <%= render 'steps/index', board: @board %>
+  </div>
+</div>
+<%= javascript 'boards' %>
