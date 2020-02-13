@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col">
+    <%= simple_form_for(@step, url: steps_path(board_id: params[:board_id]),
+                        remote: request.xhr?, html: { data: { modal: true } }) do |f| %>
+      <%= content_for(:title) do %>
+        <%= t('.title') %>
+
+      <% end %>
+
+      <%= render 'form', f: f %>
+    <% end %>
+  </div>
+</div>

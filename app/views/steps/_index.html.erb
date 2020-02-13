@@ -1,0 +1,24 @@
+<% board&.steps&.each do |step| %>
+  <div class="col-3">
+    <div class="card bg-light mb-3">
+      <div class="card-header font-weight-bold">
+          <span class="mr-2 font-size-10">
+            <%= step.name %>
+            <%= link_to edit_step_path(step), class: '', data: { modal: true }, title: t('steps.edit.title') do %>
+              <%= fa_icon 'pencil', class: 'mr-3 text-secondary' %>
+            <% end %>
+          </span>
+      </div>
+      <div class="card-body">
+        <%= render 'tasks/index', tasks: step.tasks %>
+      </div>
+      <div class="card-footer text-primary font-weight-bold">
+        <%= link_to new_task_path(step_id: step.id, board_id: @board.id),
+                    class: 'text-secondary', data: { modal: true }, title: t('tasks.new.add_task') do %>
+          <%= fa_icon 'plus', class: 'text-secondary' %>
+          <b>Task</b>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
