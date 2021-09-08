@@ -21,7 +21,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors', '~> 2.5', '>= 2.5.1'
+  gem 'better_errors', '~> 2.8'
   gem 'listen'
   gem 'pry-rails', '~> 0.3.9'
   gem 'spring'
